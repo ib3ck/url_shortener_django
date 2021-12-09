@@ -1,0 +1,11 @@
+<form action="" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit" name="button">Save</button>
+</form>
+
+<h1>{{a}}</h1>
+
+{% for u in urls %}
+<p>{{u.long_url}} - {{u.short_url}} - {{u.count}}</p>
+{% endfor %}
